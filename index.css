@@ -32,9 +32,9 @@ table th {
   text-align: center;
 }
 
-table tr:nth-child(even) {
+/* table tr:nth-child(even) {
   background-color: #8caacf;
-}
+} */
 
 table tr:hover {
   background-color: #ddd;
@@ -89,3 +89,4 @@ h1 {
   color: #2b619e;
   text-decoration: underline;
 }
+

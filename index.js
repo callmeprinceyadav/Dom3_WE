@@ -16,7 +16,7 @@ myForm.addEventListener("submit" , function(e)
 
     
 
-    tbody.innerHTML = ""
+    tbody.innerHTML = null
     myForm.reset()
     AllTask.map((ele) =>
     {
@@ -29,14 +29,20 @@ myForm.addEventListener("submit" , function(e)
         tr.append(td1,td2);
         tbody.append(tr)
 
+        if(ele.priority === "High"){
+            td1.style.backgroundColor = "red"
+            td2.style.backgroundColor = "red"
+           }
+           else if (ele.priority === "Low"){
+            td1.style.backgroundColor = "green"
+            td2.style.backgroundColor = "green"
+           }
+
+           else{
+            td1.style.backgroundColor = "white"
+            td2.style.backgroundColor = "white"
+           }
         
     })
     
 })
-
-if(priority = "High"){
-    tbody.style.backgroundColor = "green"
-}
-else if(priority = "Low"){
-    tbody.style.backgroundColor = "red"
-}
